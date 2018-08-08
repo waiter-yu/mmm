@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./lib/layer.css">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./font/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/details.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+            <header>
+                    <span class="icon-l back">
+                        <i class="fa fa-angle-left"></i>
+                    </span>
+                    <h1 id="1">
+                        国内折扣</h1>
+                    <a class="xz" href="">
+                        <img src="./images/xz1.png" alt="">
+                    </a>
+                </header>
+        <div class="content_title">
+            <div id="introduce">
+            </div>
+        </div>
+        <footer>
+            <a href="">登录</a>
+            <a href="">注册</a>
+            <a href="#1">
+                <i class="fa fa-angle-double-up"></i>
+                返回顶部</a>
+        </footer>
+        <div class="dow">
+            <p>
+                <a href="">手机APP下载</a>
+                <a href="">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
+<script type="text/template" id="goods">
+    {{each data value}}
+    <div class="title clearfix">
+        <h3>{{value.productName}}</h3>
+        <h4>{{value.productPinkage}}</h4>
+        <div class="info">
+            <span>{{value.productFrom}}</span>
+            <span>{{value.productTime}}</span>/
+            <span>{{value.productTips}}</span>
+            <a href="#newcomment">{{value.productComCount}}</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="info1">
+            <div class="pic">
+                {{@value.productImgSm}}
+            </div>
+            <p>{{value.productInfo}}</p>
+            <p class="p2">
+                {{value.productInfo1}}
+            </p>
+            <p class="img1">{{@value.productImg2}}</p>
+            <p class="img1">{{@value.productImgLg}}</p>
+            <p class="img1">{{@value.productImg3}}</p>
+        </div>
+        <div class="go">
+            <a class='gobuy' href="">
+                <span class="fa fa-shopping-cart"></span>
+                前往购买
+            </a>
+        </div>
+    </div>
+    <div class="comment">
+        {{@value.productComment}}
+    </div>
+    {{/each}}
+</script>
+<script src='./js/jquery.js'></script>
+<script src='./lib/layer.js'></script>
+<script src='./js/art-template/template-web.js'></script>
+<script src='./js/details.js'></script>
